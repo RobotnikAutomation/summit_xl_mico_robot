@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch> 
+
+    <node pkg="tf" type="static_transform_publisher" name="fake_odom" args="0 0 0 0 0 0 /odom /base_footprint 100"/>
+    <!-- node pkg="tf" type="static_transform_publisher" name="fake_odom" args="0 0 0 0 0 0 /base_link /base_footprint 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="fake_odom" args="0 0 0 0 0 0 /odom /mico_link_base 100"/ -->
+
+</launch>
