@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- start hokuyo node -->
+  <include file="$(find summit_xl_bringup)/launch/hokuyo_laser.launch"/>
+
+  <!-- start robot_state_publisher - publish fixed transforms, load robot model to param server -->
+  <include file="$(find summit_xl_mico_description)/launch/summit_xl_mico_3fg_state_robot.launch"/>
+
+  <!-- start summit_xl_controller node -->
+  <include file="$(find summit_xl_controller)/launch/summit_xl_controller.launch"/>
+
+  <!-- start robotnik_gyro -->
+  <include file="$(find robotnik_gyro)/launch/robotnik_gyro.launch" />
+
+  <!-- start summit_xl_pad nodes -->
+  <include file="$(find summit_xl_pad)/launch/summit_xl_pad.launch" />
+
+  <!-- start axis camera -->
+  <include file="$(find summit_xl_bringup)/launch/axis.launch"/> 
+
+  <!-- start gpsd -->
+  <include file="$(find summit_xl_bringup)/launch/gpsd_client.launch"/>
+
+  <!-- start robotnik_arduimu and madgwick filter -->
+  <include file="$(find summit_xl_bringup)/launch/robotnik_arduimu_madgwick.launch"/>
+
+ 
+  <!-- start kinect2 -->
+  <!--include file="$(find summit_xl_bringup)/launch/kinect2_bridge.launch"/-->
+
+  <!-- start mico robot -->
+  <include file="$(find kinova_driver)/launch/mico_arm.launch"/>
+
+  <!-- start mico pad -->
+  <include file="$(find mico_pad)/launch/mico_pad.launch"/>
+
+  <!-- start robotnik_trajectory_control -->
+  <!-- include file="$(find summit_xl_mico_robot_bringup)/launch/robotnik_traj_control/robotnik_trajectory_control.launch"/ -->
+
+ <!-- start summit_xl_web server -->
+  <include file="$(find summit_xl_web)/launch/summit_xl_web.launch"/>
+
+</launch>
+
