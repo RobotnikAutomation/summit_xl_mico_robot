@@ -36,7 +36,7 @@
   <include file="$(find mico_pad)/launch/mico_pad.launch"/>
 
   <!-- start robotnik_trajectory_control -->
-  <!-- include file="$(find summit_xl_mico_robot_bringup)/launch/robotnik_traj_control/robotnik_trajectory_control.launch"/ -->
+  <include file="$(find summit_xl_mico_robot_bringup)/launch/robotnik_traj_control/robotnik_trajectory_control.launch"/>
 
  <!-- start summit_xl_web server -->
   <include file="$(find summit_xl_web)/launch/summit_xl_web.launch"/>
